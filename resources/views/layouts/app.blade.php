@@ -8,15 +8,15 @@
     <!-- SEO Titles -->
     <title>@yield('title', 'Soluciones IT y Enterprise') | Conycom</title>
 
-    <!-- Google Fonts: Inter & Playfair Display (para el branding) -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:italic,wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="flex flex-col min-h-screen bg-corporate-light text-brand-black font-sans antialiased selection:bg-brand-black selection:text-brand-white">
+<body class="flex flex-col min-h-screen bg-corporate-light text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-brand-white">
 
     <!-- Navbar -->
     <x-navbar />
@@ -28,6 +28,9 @@
 
     <!-- Footer -->
     <x-footer />
+
+    <!-- Cookie Consent Banner (Spec-014) -->
+    <x-cookie-banner />
 
 </body>
 </html>

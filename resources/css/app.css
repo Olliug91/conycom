@@ -7,26 +7,24 @@
 
 @theme {
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     
-    --color-brand-black: #000000;
-    --color-brand-dark: #111111;
-    --color-brand-gray: #333333;
-    --color-brand-light-gray: #E5E5E5;
+    /* Conycom Palette - Spec-006 Revision 1 */
+    --color-brand-dark: #0A0A0A;
     --color-brand-white: #FFFFFF;
     
-    --color-corporate-dark: #000000;
-    --color-corporate-darker: #000000;
     --color-corporate-light: #FBFBFB;
-    --color-corporate-gray: #1C1C1C;
+    --color-corporate-gray: #E3E3E0;
+    --color-corporate-border: rgba(25, 20, 0, 0.1);
     
-    /* Efecto de acento sobrio */
+    /* Technical Accent (Subtle, professional) */
     --color-accent: #000000; 
 }
 
 /* Base Styles */
 @layer base {
     body {
-        @apply font-sans antialiased text-brand-black bg-corporate-light;
+        @apply font-sans antialiased text-brand-dark bg-corporate-light;
     }
 }
 

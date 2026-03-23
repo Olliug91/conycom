@@ -22,7 +22,11 @@
                             </div>
                             <div>
                                 <h3 class="font-black text-black text-xs uppercase tracking-[.3em] mb-2">SEDE CORPORATIVA</h3>
-                                <p class="text-gray-500 font-light">Av. de la Tecnología, 12, Planta 4<br>Valencia, España</p>
+                                <p class="text-gray-500 font-light">
+                                    <a href="{{ config('corporate.maps_link') }}" target="_blank" rel="noopener" class="hover:text-black transition-colors">
+                                        {{ config('corporate.address') }}
+                                    </a>
+                                </p>
                             </div>
                         </div>
 
@@ -32,7 +36,11 @@
                             </div>
                             <div>
                                 <h3 class="font-black text-black text-xs uppercase tracking-[.3em] mb-2">DIGITAL HUB</h3>
-                                <p class="text-gray-500 font-light">contacto@conycom.es<br>soporte@conycom.es</p>
+                                <p class="text-gray-500 font-light">
+                                    <a href="mailto:{{ config('corporate.email') }}" class="hover:text-black transition-colors">{{ config('corporate.email') }}</a><br>
+                                    <span class="block mt-1">{{ config('corporate.phone_formatted') }}</span>
+                                </p>
+                                <p class="text-[9px] font-mono text-gray-400 mt-2 uppercase tracking-widest">Alt: {{ config('corporate.email_secondary') }}</p>
                             </div>
                         </div>
                     </div>
@@ -42,29 +50,44 @@
                 <div class="bg-black p-10 lg:p-16 relative overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.15)]" x-data="{ submitted: {{ session('success') ? 'true' : 'false' }} }">
                     <div x-show="!submitted">
                         <h2 class="text-3xl font-black mb-10 text-white tracking-tighter uppercase">AGENDAR AUDITORÍA</h2>
+                        
+                        @if(session('error'))
+                            <div class="mb-8 p-4 bg-red-900/20 border border-red-900/50 text-red-200 text-xs font-mono uppercase tracking-widest">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
                         <form action="{{ route('contacto.enviar') }}" method="POST" class="space-y-8">
                             @csrf
+                            <!-- Honeypot -->
+                            <div class="hidden">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
                             <div class="space-y-6">
                                 <div>
                                     <label class="block text-[10px] font-black text-white/50 mb-3 uppercase tracking-widest">Nombre Completo</label>
-                                    <input type="text" name="nombre" required class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white focus:border-white outline-none transition-all placeholder:text-white/10" placeholder="JUAN PÉREZ">
+                                    <input type="text" name="nombre" value="{{ old('nombre') }}" required class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white focus:border-white outline-none transition-all placeholder:text-white/10" placeholder="JUAN PÉREZ">
+                                    @error('nombre') <span class="text-[9px] text-red-400 mt-1 uppercase">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
                                     <label class="block text-[10px] font-black text-white/50 mb-3 uppercase tracking-widest">Email Corporativo</label>
-                                    <input type="email" name="email" required class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white focus:border-white outline-none transition-all placeholder:text-white/10" placeholder="JUAN@EMPRESA.COM">
+                                    <input type="email" name="email" value="{{ old('email') }}" required class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white focus:border-white outline-none transition-all placeholder:text-white/10" placeholder="JUAN@EMPRESA.COM">
+                                    @error('email') <span class="text-[9px] text-red-400 mt-1 uppercase">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
                                     <label class="block text-[10px] font-black text-white/50 mb-3 uppercase tracking-widest">Servicio</label>
-                                    <select class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white/50 focus:border-white focus:text-white outline-none transition-all appearance-none cursor-pointer">
-                                        <option class="bg-black">AUDITORÍA TÉCNICA</option>
-                                        <option class="bg-black">DESARROLLO LARAVEL</option>
-                                        <option class="bg-black">INFRAESTRUCTURA IT</option>
-                                        <option class="bg-black">CIBERSEGURIDAD</option>
+                                    <select name="servicio" class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white/50 focus:border-white focus:text-white outline-none transition-all appearance-none cursor-pointer">
+                                        <option value="AUDITORÍA TÉCNICA" class="bg-black" {{ old('servicio') == 'AUDITORÍA TÉCNICA' ? 'selected' : '' }}>AUDITORÍA TÉCNICA</option>
+                                        <option value="DESARROLLO LARAVEL" class="bg-black" {{ old('servicio') == 'DESARROLLO LARAVEL' ? 'selected' : '' }}>DESARROLLO LARAVEL</option>
+                                        <option value="ORQUESTACIÓN N8N" class="bg-black" {{ old('servicio') == 'ORQUESTACIÓN N8N' ? 'selected' : '' }}>ORQUESTACIÓN N8N</option>
+                                        <option value="MOVILIDAD IONIC" class="bg-black" {{ old('servicio') == 'MOVILIDAD IONIC' ? 'selected' : '' }}>MOVILIDAD IONIC</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label class="block text-[10px] font-black text-white/50 mb-3 uppercase tracking-widest">Mensaje</label>
-                                    <textarea name="mensaje" rows="4" required class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white focus:border-white outline-none transition-all placeholder:text-white/10 resize-none" placeholder="CUÉNTENOS SU NECESIDAD..."></textarea>
+                                    <textarea name="mensaje" rows="4" required class="w-full px-0 py-3 bg-transparent border-b border-white/20 text-white focus:border-white outline-none transition-all placeholder:text-white/10 resize-none" placeholder="CUÉNTENOS SU NECESIDAD...">{{ old('mensaje') }}</textarea>
+                                    @error('mensaje') <span class="text-[9px] text-red-400 mt-1 uppercase">{{ $message }}</span> @enderror
                                 </div>
                             </div>
                             <button type="submit" class="w-full py-5 bg-white text-black font-black uppercase tracking-[0.2em] hover:bg-gray-200 transition-all text-xs">

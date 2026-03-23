@@ -1,43 +1,42 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20">
-            <!-- Nuevo Logo Corporativo (Imagen) -->
-            <div class="flex items-center">
-                <a href="{{ route('home') }}" class="py-4">
-                    @if(file_exists(public_path('images/logo.png')))
-                        <img src="{{ asset('images/logo.png') }}" alt="Conycom Logo" class="h-14 w-auto">
-                    @else
-                        <!-- Placeholder técnico si el archivo aún no existe -->
-                        <div class="flex flex-col items-start">
-                            <span class="text-3xl font-extrabold tracking-tighter uppercase leading-none">CONYCOM</span>
-                            <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-gray-500 mt-1">Conectividad y Comunicaciones</span>
-                        </div>
-                    @endif
+<nav x-data="{ open: false }" class="bg-corporate-light border-b border-corporate-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between h-28 items-center">
+            <!-- Technical Logo -->
+            <div class="flex items-center gap-4">
+                <a href="{{ route('home') }}" class="group">
+                    <div class="flex flex-col items-start transition-transform group-hover:scale-[1.02]">
+                        @if(file_exists(public_path(config('corporate.logo'))))
+                            <img src="{{ asset(config('corporate.logo')) }}" alt="{{ config('corporate.logo_alt') }}" class="{{ config('corporate.logo_height_nav') }} w-auto max-w-[240px] transition-all">
+                        @else
+                            <span class="text-2xl font-bold tracking-tighter uppercase leading-none">CONYCOM</span>
+                            <span class="text-[9px] font-mono uppercase tracking-widest text-[#706f6c] mt-1">v2.0 // SDD-006</span>
+                        @endif
+                    </div>
                 </a>
             </div>
 
-            <!-- Menú de Escritorio (Estilo B/N High-Tech) -->
-            <div class="hidden sm:flex sm:items-center sm:gap-10">
-                <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-black font-extrabold border-b-2 border-black' : 'text-gray-500 hover:text-black transition-colors' }} pb-1 text-sm uppercase tracking-widest">
+            <!-- Swiss Nav -->
+            <div class="hidden sm:flex sm:items-center sm:gap-12">
+                <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-brand-dark font-bold underline underline-offset-8' : 'text-[#706f6c] hover:text-brand-dark transition-colors' }} text-xs font-sans uppercase tracking-widest">
                     Inicio
                 </a>
-                <a href="{{ route('servicios') }}" class="{{ request()->routeIs('servicios') ? 'text-black font-extrabold border-b-2 border-black' : 'text-gray-500 hover:text-black transition-colors' }} pb-1 text-sm uppercase tracking-widest">
+                <a href="{{ route('servicios') }}" class="{{ request()->routeIs('servicios') ? 'text-brand-dark font-bold underline underline-offset-8' : 'text-[#706f6c] hover:text-brand-dark transition-colors' }} text-xs font-sans uppercase tracking-widest">
                     Servicios
                 </a>
-                <a href="{{ route('proyectos') }}" class="{{ request()->routeIs('proyectos') ? 'text-black font-extrabold border-b-2 border-black' : 'text-gray-500 hover:text-black transition-colors' }} pb-1 text-sm uppercase tracking-widest">
+                <a href="{{ route('proyectos') }}" class="{{ request()->routeIs('proyectos') ? 'text-brand-dark font-bold underline underline-offset-8' : 'text-[#706f6c] hover:text-brand-dark transition-colors' }} text-xs font-sans uppercase tracking-widest">
                     Proyectos
                 </a>
-                <a href="{{ route('contacto') }}" class="px-6 py-2 bg-black text-white text-sm font-bold uppercase tracking-widest hover:bg-gray-800 transition-all shadow-lg">
-                    Auditoría
+                <a href="{{ route('contacto') }}" class="px-8 py-2.5 bg-brand-dark text-brand-white text-[10px] font-mono uppercase tracking-[0.2em] hover:opacity-90 transition-all">
+                    Hablemos
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
             <div class="flex justify-center items-center sm:hidden">
-                <button @click="open = !open" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                <button @click="open = !open" class="text-brand-dark focus:outline-none">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path x-show="open" style="display: none;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16M4 18h16" />
+                        <path x-show="open" style="display: none;" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -45,22 +44,16 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div x-show="open" style="display: none;" class="sm:hidden border-t border-gray-100 bg-white shadow-lg absolute w-full">
-        <div class="pt-2 pb-4 space-y-1">
-            <a href="{{ route('home') }}" class="block pl-3 pr-4 py-3 border-l-4 {{ request()->routeIs('home') ? 'border-electric-blue text-electric-blue bg-blue-50' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-electric-blue' }}">
-                Inicio
-            </a>
-            <a href="{{ route('servicios') }}" class="block pl-3 pr-4 py-3 border-l-4 {{ request()->routeIs('servicios') ? 'border-electric-blue text-electric-blue bg-blue-50' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-electric-blue' }}">
-                Servicios
-            </a>
-            <a href="{{ route('proyectos') }}" class="block pl-3 pr-4 py-3 border-l-4 {{ request()->routeIs('proyectos') ? 'border-electric-blue text-electric-blue bg-blue-50' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-electric-blue' }}">
-                Proyectos
-            </a>
-            <div class="px-4 pt-4 pb-2">
-                <a href="{{ route('contacto') }}" class="block w-full text-center px-4 py-2 bg-electric-blue text-white font-medium rounded hover:bg-electric-blue-hover transition-colors">
-                    Solicitar Auditoría
-                </a>
-            </div>
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-4"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         class="sm:hidden border-t border-corporate-border bg-corporate-light absolute w-full shadow-2xl">
+        <div class="p-8 space-y-6">
+            <a href="{{ route('home') }}" class="block text-xl font-bold uppercase tracking-tighter {{ request()->routeIs('home') ? 'text-brand-dark' : 'text-[#706f6c]' }}">Inicio</a>
+            <a href="{{ route('servicios') }}" class="block text-xl font-bold uppercase tracking-tighter {{ request()->routeIs('servicios') ? 'text-brand-dark' : 'text-[#706f6c]' }}">Servicios</a>
+            <a href="{{ route('proyectos') }}" class="block text-xl font-bold uppercase tracking-tighter {{ request()->routeIs('proyectos') ? 'text-brand-dark' : 'text-[#706f6c]' }}">Proyectos</a>
+            <a href="{{ route('contacto') }}" class="block w-full text-center py-4 bg-brand-dark text-brand-white font-mono uppercase tracking-widest text-xs">Hablemos de tu Proyecto</a>
         </div>
     </div>
 </nav>

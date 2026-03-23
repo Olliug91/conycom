@@ -3,235 +3,340 @@
 @section('title', 'Soluciones IT de gran envergadura y agilidad digital')
 
 @section('content')
-    <!-- Hero Section: The Bridge (Legacy & Evolution) -->
-    <section class="relative bg-black pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden">
-        <!-- Grid de fondo "Blueprint" -->
-        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-white/20 via-white/5 to-transparent"></div>
-            <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:items-start">
-                <!-- Tag Industrial -->
-                <div class="inline-flex items-center gap-3 px-3 py-1 border border-white/10 mb-12 animate-fade-in">
-                    <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
-                    <span class="text-[10px] font-black uppercase tracking-[0.4em] text-white/60">Legacy x Innovation | Est. 1994</span>
-                </div>
-
-                <div class="max-w-5xl animate-slide-up" style="animation-delay: 0.2s;">
-                    <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter mb-10">
-                        DE ERPs <span class="text-white/20 italic font-light">CRÍTICOS</span> <br>
-                        A ECOSISTEMAS <br>
-                        DE <span class="bg-white text-black px-4 ml-[-8px]">CÓDIGO IA</span>
+    <!-- Hero Section: Agilidad + Escabilidad -->
+    <section class="border-b border-corporate-border overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[75vh]">
+            
+            <!-- Innovation Pillar -->
+            <div class="p-8 lg:p-16 bg-corporate-gray border-b lg:border-b-0 lg:border-r border-corporate-border flex flex-col justify-between group transition-all duration-700">
+                <div class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-[#706f6c]">Digital Evolution // Est. 1996</span>
+                        <div class="h-px flex-1 bg-brand-dark/10"></div>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] text-brand-dark">
+                        AGILIDAD PARA<br>INNOVAR.
                     </h1>
+                    <p class="text-base text-brand-dark/80 leading-relaxed max-w-sm font-sans">
+                        Transformamos ideas complejas en soluciones digitales rápidas y efectivas. Ayudamos a su empresa a moverse a la velocidad que el mercado demanda hoy.
+                    </p>
                 </div>
-
-                <div class="grid lg:grid-cols-12 gap-12 items-end w-full animate-slide-up" style="animation-delay: 0.4s;">
-                    <div class="lg:col-span-7">
-                        <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl border-l border-white/10 pl-8">
-                            Construimos el futuro sobre 30 años de robustez farmacéutica. De sistemas legados que facturan millones a la agilidad del desarrollo web de alta precisión. <br>
-                            <span class="text-white font-medium mt-4 block italic">No creamos webs. Diseñamos infraestructuras digitales.</span>
-                        </p>
-                    </div>
-                    
-                    <div class="lg:col-span-5 flex flex-col sm:flex-row gap-4 justify-end">
-                        <a href="{{ route('contacto') }}" class="group relative px-12 py-6 bg-white text-black text-xs font-black uppercase tracking-[0.3em] overflow-hidden transition-all hover:pr-16">
-                            <span class="relative z-10">Agendar Auditoría</span>
-                            <span class="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all">→</span>
-                        </a>
-                        <a href="#proyectos" class="px-12 py-6 border border-white/20 text-white text-xs font-black uppercase tracking-[0.3em] hover:bg-white/5 transition-all text-center">
-                            Ver Legado
-                        </a>
-                    </div>
+                
+                <div class="mt-12 flex items-center gap-2 font-mono text-[10px] text-[#706f6c]">
+                    <span>[ READY_TO_BUILD ]</span>
+                    <span class="animate-pulse">_</span>
                 </div>
             </div>
-        </div>
 
-        <!-- Coordenadas Técnicas (Decorative) -->
-        <div class="absolute bottom-10 left-10 hidden xl:block">
-            <div class="text-[10px] font-mono text-white/20 leading-none tracking-widest uppercase">
-                Lat: 39.4699° N <br>
-                Lon: 0.3763° W <br>
-                C_SYS: CONYCOM_VLU_03
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección: The Shift (Nuestra Evolución) -->
-    <section class="py-32 bg-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-24 items-center">
-                <!-- Columna: Narrativa -->
-                <div class="space-y-10 animate-slide-up" style="animation-delay: 0.1s;">
-                    <div class="space-y-4">
-                        <h2 class="text-4xl md:text-6xl font-black text-black tracking-tighter leading-none italic uppercase">
-                            Del ERP Farmacéutico <br>
-                            <span class="text-gray-300">A la Web Proactiva.</span>
-                        </h2>
-                        <div class="w-24 h-px bg-black opacity-20"></div>
+            <!-- Scalability Pillar -->
+            <div class="p-8 lg:p-16 flex flex-col justify-between bg-white group hover:bg-brand-dark transition-all duration-700">
+                <div class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-[#706f6c] group-hover:text-white/40">Reliable Systems // 2026</span>
+                        <div class="h-px flex-1 bg-corporate-border group-hover:bg-white/10"></div>
+                        <span class="w-2 h-2 rounded-full bg-brand-dark animate-ping group-hover:bg-white"></span>
                     </div>
-                    
-                    <div class="prose prose-xl font-light text-gray-400 space-y-6 max-w-xl">
-                        <p class="text-black first-letter:text-6xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
-                            Nacimos en un entorno de máxima exigencia: **sistemas críticos que facturan millones**. Con la base de 30 años de experiencia heredada y bajo la visión de un fundador capaz de gestionar en solitario infraestructuras, soporte y marketing, evolucionamos.
-                        </p>
-                        <p>
-                            Dejamos atrás la era del **Visual FoxPro** para abrazar el desarrollo web y móvil de vanguardia. Aplicando el rigor de la **arquitectura técnica** y la precisión de la **fabricación mecánica**, construimos software que no solo funciona, sino que escala.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-8 border-t border-gray-100 pt-10">
-                        <div>
-                            <div class="text-xs font-black uppercase tracking-widest text-black mb-1">Legacy Power</div>
-                            <div class="text-[10px] text-gray-500 font-mono">Mission Critical ERPs vs. Millions of €</div>
-                        </div>
-                        <div>
-                            <div class="text-xs font-black uppercase tracking-widest text-black mb-1">Web Horizon</div>
-                            <div class="text-[10px] text-gray-500 font-mono">Laravel • AI APIs • Dynamics Integrations</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Columna: Visual / Metafórica -->
-                <div class="relative group animate-fade-in" style="animation-delay: 0.3s;">
-                    <div class="aspect-[4/5] bg-gray-50 border border-gray-100 p-12 flex flex-col justify-center relative overflow-hidden transition-all group-hover:bg-black group-hover:text-white duration-700">
-                        <!-- Blueprint decorativo -->
-                        <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent group-hover:via-white/20 transition-all"></div>
-                        <div class="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent group-hover:via-white/20 transition-all"></div>
-                        
-                        <div class="relative z-10 transition-transform group-hover:scale-105 duration-500">
-                            <span class="text-[10rem] font-black leading-none italic opacity-5 group-hover:opacity-20 transition-all mb-4 block">1994</span>
-                            <h3 class="text-3xl font-black mb-6 tracking-tighter">CONSTRUCCIÓN <br> DIGITAL SIN LÍMITES</h3>
-                            <p class="text-lg font-light italic leading-relaxed text-gray-500 group-hover:text-gray-300">
-                                "No somos una agencia más de IA genérica. Somos artesanos del código técnico con décadas de veteranía."
-                            </p>
-                        </div>
-                        
-                        <!-- Coordenadas decorativas -->
-                        <div class="absolute bottom-10 right-10 text-[10px] font-mono opacity-20 group-hover:opacity-50 tracking-tighter">
-                            SYS_004_SHIFT // V1.0.3
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección: Casos de Impacto Real -->
-    <section class="py-32 bg-corporate-light border-y border-gray-100" id="proyectos">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-6">
-                <div class="max-w-3xl animate-slide-up">
-                    <div class="text-xs font-black uppercase tracking-[0.4em] text-gray-400 mb-6 border-b border-gray-200 inline-block pb-1">Protagonismo Técnico</div>
-                    <h2 class="text-5xl md:text-7xl font-black text-black tracking-tighter leading-none">
-                        CASOS QUE <br>
-                        DEFINEN <span class="italic text-gray-300">VETERANÍA</span>
+                    <h2 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] text-brand-dark group-hover:text-white transition-colors uppercase">
+                        SOLIDEZ PARA<br>ESCALAR.
                     </h2>
-                </div>
-                <div class="hidden md:block">
-                    <p class="text-gray-400 italic font-light max-w-sm text-right leading-relaxed">
-                        Soluciones que integran ERPs, webs corporativas y ecosistemas móviles con precisión de relojería.
+                    <p class="text-base text-brand-dark/80 group-hover:text-white/80 leading-relaxed max-w-sm font-sans transition-colors">
+                        No solo creamos webs; proyectamos la infraestructura técnica que su negocio necesita para crecer sin límites y con absoluta seguridad.
                     </p>
                 </div>
-            </div>
 
-            <div class="grid md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
-                <!-- Caso 1: Karate -->
-                <div class="bg-white p-12 lg:p-20 group hover:bg-black transition-all duration-700 animate-slide-up" style="animation-delay: 0.1s;">
-                    <div class="flex justify-between items-start mb-12">
-                        <span class="text-[10px] font-mono p-2 border border-gray-100 text-gray-400 group-hover:border-white/20">001/03</span>
-                    </div>
-                    <h3 class="text-4xl font-black mb-6 tracking-tighter text-black group-hover:text-white uppercase leading-none">
-                        Federación de Karate <br>
-                        <span class="text-gray-300 italic font-light group-hover:text-white/40">C. Valenciana</span>
-                    </h3>
-                    <p class="text-gray-500 group-hover:text-gray-400 mb-12 text-lg font-light leading-relaxed">
-                        Implante de un **ERP de gestión administrativa y deportiva integrada**. Centralización de datos federativos bajo un motor de alta disponibilidad.
-                    </p>
-                    <ul class="space-y-2 mb-12">
-                        <li class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-black group-hover:text-white/60">
-                            <span class="w-1 h-[2px] bg-black group-hover:bg-white"></span> Custom ERP Engine
-                        </li>
-                        <li class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-black group-hover:text-white/60">
-                            <span class="w-1 h-[2px] bg-black group-hover:bg-white"></span> Gestión Federativa
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Caso 2: Nuevo Centro -->
-                <div class="bg-white p-12 lg:p-20 group hover:bg-black transition-all duration-700 animate-slide-up" style="animation-delay: 0.2s;">
-                    <div class="flex justify-between items-start mb-12">
-                        <span class="text-[10px] font-mono p-2 border border-gray-100 text-gray-400 group-hover:border-white/20">002/03</span>
-                    </div>
-                    <h3 class="text-4xl font-black mb-6 tracking-tighter text-black group-hover:text-white uppercase leading-none">
-                        CC Nuevo Centro <br>
-                        <span class="text-gray-300 italic font-light group-hover:text-white/40">Digital Ecosystem</span>
-                    </h3>
-                    <p class="text-gray-500 group-hover:text-gray-400 mb-12 text-lg font-light leading-relaxed">
-                        Página web corporativa avanzada con integraciones críticas de e-commerce y sincronización en tiempo real con **Microsoft Dynamics**.
-                    </p>
-                    <ul class="space-y-2 mb-12">
-                        <li class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-black group-hover:text-white/60">
-                            <span class="w-1 h-[2px] bg-black group-hover:bg-white"></span> Dynamics Integration
-                        </li>
-                        <li class="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-black group-hover:text-white/60">
-                            <span class="w-1 h-[2px] bg-black group-hover:bg-white"></span> Full E-commerce Sync
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Legacy Support Footer (Dentro de la sección) -->
-            <div class="mt-24 pt-12 border-t border-gray-200 animate-fade-in" style="animation-delay: 0.4s;">
-                <div class="flex flex-col md:flex-row gap-12 items-center justify-between">
-                    <div>
-                        <h4 class="text-xs font-black uppercase tracking-widest text-black mb-2 italic">Legacy Support + Evolution</h4>
-                        <p class="text-[10px] font-mono leading-tight opacity-40 max-w-sm">
-                            VFP Legacy Engine // ERP Sector Farma // High Volume Billing (Standard: €M)
-                        </p>
-                    </div>
-                    <a href="{{ route('servicios') }}" class="text-xs font-black uppercase tracking-[0.3em] border-b-2 border-black pb-1 hover:text-gray-400 hover:border-gray-200 transition-all">
-                        Explorar área técnica →
+                <div class="mt-12 flex flex-wrap gap-4">
+                    <a href="{{ route('contacto') }}" class="px-8 py-3 bg-brand-dark text-brand-white text-[10px] font-mono uppercase tracking-widest hover:opacity-90 transition-all border border-brand-dark group-hover:bg-white group-hover:text-brand-dark group-hover:border-white">
+                        Impulsa tu Negocio
+                    </a>
+                    <a href="#proyectos" class="px-8 py-3 border border-brand-dark text-brand-dark text-[10px] font-mono uppercase tracking-widest hover:bg-brand-dark hover:text-brand-white transition-all group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-brand-dark">
+                        Ver Soluciones
                     </a>
                 </div>
             </div>
+            
         </div>
     </section>
 
-    <!-- Prueba Social Monocroma -->
-    <section class="py-32 bg-black text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-16 text-center">
-                <div>
-                    <div class="text-6xl font-black mb-4 tracking-tighter italic">30+</div>
-                    <div class="text-white/40 font-bold uppercase tracking-[0.3em] text-[10px]">Años de experiencia</div>
-                </div>
-                <div>
-                    <div class="text-6xl font-black mb-4 tracking-tighter italic">500+</div>
-                    <div class="text-white/40 font-bold uppercase tracking-[0.3em] text-[10px]">Proyectos</div>
-                </div>
-                <div>
-                    <div class="text-6xl font-black mb-4 tracking-tighter italic">99.9%</div>
-                    <div class="text-white/40 font-bold uppercase tracking-[0.3em] text-[10px]">Uptime</div>
-                </div>
-                <div>
-                    <div class="text-6xl font-black mb-4 tracking-tighter italic">24/7</div>
-                    <div class="text-white/40 font-bold uppercase tracking-[0.3em] text-[10px]">Soporte</div>
+    <!-- Section: Trusted By (Spec-011) -->
+    <section class="py-12 bg-white border-b border-brand-dark/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 grayscale opacity-40 hover:opacity-100 opacity-transition duration-700 overflow-hidden">
+                <span class="text-[9px] font-mono uppercase tracking-[0.3em] text-[#706f6c] border-r border-brand-dark/10 pr-8 hidden lg:block">Trusted by</span>
+                <div class="flex flex-wrap justify-center lg:justify-between items-center gap-x-12 gap-y-8 flex-1">
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">Disfarsor</span>
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">CC Nuevo Centro</span>
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">Industrias Saludes</span>
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">F. Karate CV</span>
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">Betopeer</span>
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">Fitness Fabra</span>
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">BasicSoft</span>
+                    <span class="text-xs font-black tracking-tighter uppercase whitespace-nowrap">Veribridge</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Final Monocromo -->
-    <section class="py-32 bg-white border-y border-black/5">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-5xl font-black tracking-tighter mb-8">¿HABLAMOS?</h2>
-            <p class="text-xl text-gray-500 font-light mb-12">Nuestro equipo senior está listo para analizar su infraestructura sin compromiso.</p>
-            <a href="{{ route('contacto') }}" class="inline-block px-12 py-5 bg-black text-white text-sm font-black uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">
-                Agendar Auditoría Gratuita
-            </a>
+    <!-- Section: Evolución Digital -->
+    <section id="evolucion" class="py-24 bg-brand-dark text-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-24 items-start">
+                
+                <!-- Narrative -->
+                <div class="space-y-12">
+                    <div class="flex items-center gap-4">
+                        <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">01 // Tu Evolución</span>
+                        <div class="h-px w-12 bg-white/20"></div>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tighter leading-none uppercase">
+                        SU PRÓXIMO <br>
+                        <span class="text-white/40">PASO DIGITAL.</span>
+                    </h2>
+                    <div class="space-y-6 text-white/70 leading-relaxed text-base max-w-lg font-sans">
+                        <p>
+                            En Conycom, no solo resolvemos problemas técnicos; desbloqueamos el potencial de su negocio. Nos apasiona construir soluciones ágiles que eliminen fricciones y permitan a su equipo centrarse en lo que mejor sabe hacer.
+                        </p>
+                        <p>
+                            Nuestra metodología combina la rapidez del desarrollo moderno con una **disciplina de ingeniería de alta precisión**. Esta mentalidad constructiva nos permite proyectar estructuras digitales que no solo funcionan hoy, sino que están preparadas para lo que venga mañana.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technical Stats -->
+                <div class="border border-white/10 p-8 lg:p-12 space-y-12 bg-white/5">
+                    <div class="grid grid-cols-2 gap-12">
+                        <div>
+                            <span class="block text-[10px] font-mono uppercase tracking-widest text-white/40 mb-4">Metodología</span>
+                            <span class="text-4xl font-bold tracking-tighter italic">SDD</span>
+                            <span class="block text-[9px] font-mono uppercase mt-2 opacity-60">Spec-Driven Development</span>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] font-mono uppercase tracking-widest text-white/40 mb-4">Disciplina</span>
+                            <span class="text-2xl font-bold tracking-tighter leading-tight">Ingeniería<br>Digital</span>
+                            <span class="block text-[9px] font-mono uppercase mt-2 opacity-60">Sistemas</span>
+                        </div>
+                    </div>
+                    <div class="pt-12 border-t border-white/10">
+                        <p class="text-sm font-sans text-white/60 leading-relaxed italic">
+                            "Construimos con la mentalidad de quien sabe que los cimientos lo son todo."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Casos de Impacto -->
+    <section class="py-24 bg-corporate-gray scroll-mt-20" id="proyectos">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-brand-dark/10 pb-12">
+                <div class="space-y-4">
+                    <span class="text-[10px] font-mono uppercase tracking-[0.4em] text-[#706f6c]">02 // Proyectos</span>
+                    <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-none uppercase text-brand-dark">
+                        INGENIERÍA <br>
+                        <span class="text-[#706f6c]">DE PRECISIÓN.</span>
+                    </h2>
+                </div>
+                <div class="flex flex-col items-end gap-4">
+                    <p class="text-brand-dark/60 font-sans text-sm max-w-sm text-right leading-relaxed">
+                        Infraestructuras digitales que integran ERPs, ecosistemas proactivos y auditorías técnicas con un rigor metodológico absoluto.
+                    </p>
+                    <a href="{{ route('proyectos') }}" class="text-[10px] font-mono uppercase tracking-widest text-brand-dark hover:underline underline-offset-8">Ver Portafolio Completo →</a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-px bg-brand-dark/5 border border-brand-dark/10 overflow-hidden">
+                @foreach($featuredProjects as $project)
+                    <x-project-card :project="$project" />
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Meta Stats -->
+    <section class="py-24 bg-corporate-light border-y border-brand-dark/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-bold tracking-tighter">30+</div>
+                    <div class="text-brand-dark/40 font-mono uppercase tracking-widest text-[9px]">Años Exper.</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-bold tracking-tighter">500+</div>
+                    <div class="text-brand-dark/40 font-mono uppercase tracking-widest text-[9px]">Activos IT</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-bold tracking-tighter">99.9%</div>
+                    <div class="text-brand-dark/40 font-mono uppercase tracking-widest text-[9px]">Precisión</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-bold tracking-tighter">24/7</div>
+                    <div class="text-brand-dark/40 font-mono uppercase tracking-widest text-[9px]">Soporte</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Ecosistema de Precisión y Automatización (Spec-010 V2) -->
+    <section class="py-24 bg-white border-b border-brand-dark/5 relative overflow-hidden">
+        <!-- Technical Grid Background -->
+        <div class="absolute inset-0 opacity-[0.02] pointer-events-none" style="background-image: radial-gradient(#000 0.5px, transparent 0.5px); background-size: 20px 20px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-24 space-y-4">
+                <span class="text-[10px] font-mono uppercase tracking-[0.4em] text-[#706f6c]">03 // Metodología</span>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter uppercase text-brand-dark">INGENIERÍA DE CICLO COMPLETO</h2>
+                <div class="h-1 w-12 bg-brand-dark mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 lg:gap-24">
+                <!-- Pillar 1: SDD -->
+                <div class="flex gap-8 group">
+                    <div class="w-16 h-16 shrink-0 border border-brand-dark/10 flex items-center justify-center group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold tracking-tight text-brand-dark uppercase">Spec-Driven Development</h3>
+                        <p class="text-brand-dark/60 text-sm leading-relaxed font-sans max-w-sm">
+                            <span class="font-bold text-brand-dark text-[10px] block mb-1 uppercase tracking-wider">Planificación de Precisión</span>
+                            Eliminamos la improvisación mediante especificaciones técnicas rigurosas antes del código. Entregas 2x más rápidas y alineadas al negocio.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Connectivity -->
+                <div class="flex gap-8 group">
+                    <div class="w-16 h-16 shrink-0 border border-brand-dark/10 flex items-center justify-center group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold tracking-tight text-brand-dark uppercase">Arquitectura Conectada</h3>
+                        <p class="text-brand-dark/60 text-sm leading-relaxed font-sans max-w-sm">
+                            <span class="font-bold text-brand-dark text-[10px] block mb-1 uppercase tracking-wider">Backend & APIs</span>
+                            Especialistas en Laravel. Construimos el cerebro de su sistema, unificando datos fragmentados en una infraestructura robusta y escalable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Multi-platform -->
+                <div class="flex gap-8 group">
+                    <div class="w-16 h-16 shrink-0 border border-brand-dark/10 flex items-center justify-center group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold tracking-tight text-brand-dark uppercase">Movilidad Nativa</h3>
+                        <p class="text-brand-dark/60 text-sm leading-relaxed font-sans max-w-sm">
+                            <span class="font-bold text-brand-dark text-[10px] block mb-1 uppercase tracking-wider">iOS + Android + Web</span>
+                            Mediante Ionic, desplegamos aplicaciones de alto rendimiento con una sola base de código, garantizando presencia total con eficiencia máxima.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Automation (NEW) -->
+                <div class="flex gap-8 group">
+                    <div class="w-16 h-16 shrink-0 border border-brand-dark/10 flex items-center justify-center group-hover:bg-brand-dark group-hover:text-white transition-all duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a2 2 0 01-2-2V5a2 2 0 012-2h4z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold tracking-tight text-brand-dark uppercase">Orquestación Automatizada</h3>
+                        <p class="text-brand-dark/60 text-sm leading-relaxed font-sans max-w-sm">
+                            <span class="font-bold text-brand-dark text-[10px] block mb-1 uppercase tracking-wider">Integración con n8n</span>
+                            Automatizamos sus procesos de negocio conectando su núcleo Laravel con herramientas externas (CRM, Slack, AI) a través de flujos inteligentes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Diagnostic Tool (NEW) -->
+    <x-digital-agility-quiz />
+
+    <!-- Section: Trayectoria de Precisión (Spec-012) -->
+    <section class="py-32 bg-white overflow-hidden border-t border-brand-dark/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
+                <div class="max-w-xl">
+                    <span class="text-[10px] font-mono uppercase tracking-[0.4em] text-[#706f6c] mb-6 block">04 // Continuidad</span>
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none uppercase text-brand-dark mb-8">
+                        28 AÑOS DE <br>
+                        <span class="text-[#706f6c]">INGENIERÍA REAL.</span>
+                    </h2>
+                    <p class="text-brand-dark/70 font-sans text-base leading-relaxed">
+                        No somos una agencia estacional. Somos una estructura técnica que ha evolucionado con la industria, manteniendo la misma obsesión por la fiabilidad desde el primer día.
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line SVG -->
+                <div class="absolute top-1/2 left-0 w-full h-px bg-brand-dark/10 hidden md:block"></div>
+                
+                <div class="grid md:grid-cols-3 gap-12 relative z-10">
+                    <!-- Milestone 1996 -->
+                    <div class="group">
+                        <div class="mb-12 md:mb-0">
+                            <span class="text-4xl font-black font-mono tracking-tighter text-brand-dark/20 group-hover:text-brand-dark transition-colors duration-500">1996</span>
+                            <div class="w-3 h-3 bg-brand-dark rounded-full my-6 hidden md:block border-4 border-white ring-1 ring-brand-dark mx-auto md:mx-0"></div>
+                            <h3 class="text-lg font-bold tracking-tight uppercase mb-4">Los Cimientos</h3>
+                            <p class="text-sm text-brand-dark/60 font-sans leading-relaxed">
+                                Fundación de Conycom. Desarrollo de sistemas de gestión críticos bajo **Visual FoxPro**. Construyendo la base de la fiabilidad industrial.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2010s -->
+                    <div class="group">
+                        <div class="mb-12 md:mb-0">
+                            <span class="text-4xl font-black font-mono tracking-tighter text-brand-dark/20 group-hover:text-brand-dark transition-colors duration-500">2010s</span>
+                            <div class="w-3 h-3 bg-brand-dark rounded-full my-6 hidden md:block border-4 border-white ring-1 ring-brand-dark"></div>
+                            <h3 class="text-lg font-bold tracking-tight uppercase mb-4">La Evolución Web</h3>
+                            <p class="text-sm text-brand-dark/60 font-sans leading-relaxed">
+                                Transición a arquitecturas web escalables e integración de los primeros ecosistemas de conectividad para el sector empresarial.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone Hoy -->
+                    <div class="group">
+                        <div class="mb-12 md:mb-0">
+                            <span class="text-4xl font-black font-mono tracking-tighter text-brand-dark/20 group-hover:text-brand-dark transition-colors duration-500">Hoy</span>
+                            <div class="w-3 h-3 bg-brand-dark rounded-full my-6 hidden md:block border-4 border-white ring-1 ring-brand-dark"></div>
+                            <h3 class="text-lg font-bold tracking-tight uppercase mb-4">Precisión Total</h3>
+                            <p class="text-sm text-brand-dark/60 font-sans leading-relaxed">
+                                Liderando con **Laravel, Ionic y n8n**. Metodología **SDD** para una ejecución sin fricción y una automatización proactiva.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: CTA Final -->
+    <section class="py-32 bg-white relative overflow-hidden">
+        <!-- Abstract Pattern -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(0deg, transparent 24%, #000 25%, #000 26%, transparent 27%, transparent 74%, #000 75%, #000 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, #000 25%, #000 26%, transparent 27%, transparent 74%, #000 75%, #000 76%, transparent 77%, transparent); background-size: 50px 50px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-12 relative z-10">
+            <div class="text-[10px] font-mono uppercase tracking-[0.4em] text-[#706f6c]">05 // Hablemos</div>
+            <h2 class="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-none">IMPULSAMOS <br> SU ÉXITO.</h2>
+            <p class="text-brand-dark/60 font-sans text-lg max-w-xl mx-auto leading-relaxed">
+                ¿Preparado para llevar su infraestructura digital al siguiente nivel? Diseñamos el camino, construimos la solución y le acompañamos en el crecimiento.
+            </p>
+            <div class="pt-6">
+                <a href="{{ route('contacto') }}" class="inline-block px-12 py-5 bg-brand-dark text-brand-white text-[10px] font-mono uppercase tracking-[0.3em] hover:scale-105 transition-all shadow-2xl">
+                    Comenzar Ahora
+                </a>
+            </div>
         </div>
     </section>
 @endsection
