@@ -2,6 +2,11 @@
 
 @section('title', 'Soluciones IT de gran envergadura y agilidad digital')
 
+@push('meta')
+    <meta property="og:description" content="Ingeniería técnica de precisión para infraestructuras críticas y transformación digital acelerada. Más de 28 años de fiabilidad.">
+    <meta name="twitter:description" content="Ingeniería técnica de precisión para infraestructuras críticas y transformación digital acelerada.">
+@endpush
+
 @section('content')
     <!-- Hero Section: Agilidad + Escabilidad -->
     <section class="border-b border-corporate-border overflow-hidden">

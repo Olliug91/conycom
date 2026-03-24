@@ -2,6 +2,11 @@
 
 @section('title', 'Servicios IT y Consultoría Enterprise')
 
+@push('meta')
+    <meta property="og:description" content="Infraestructura IT, desarrollo Laravel de alta gama y consultoría estratégica para sistemas críticos de negocio. Profesionalidad desde 1996.">
+    <meta name="twitter:description" content="Infraestructura IT, desarrollo Laravel de alta gama y consultoría estratégica para sistemas críticos de negocio.">
+@endpush
+
 @section('content')
     <!-- Header Page B/N -->
     <header class="bg-black pt-40 pb-20 relative overflow-hidden text-center">

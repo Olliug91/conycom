@@ -2,6 +2,11 @@
 
 @section('title', 'El Equipo y Nuestro Legado')
 
+@push('meta')
+    <meta property="og:description" content="Conoce al equipo detrás de Conycom: 28 años de visión, rigor y precisión técnica en ingeniería de sistemas.">
+    <meta name="twitter:description" content="Conoce al equipo detrás de Conycom: 28 años de visión, rigor y precisión técnica en ingeniería de sistemas.">
+@endpush
+
 @section('content')
     <!-- Hero Header -->
     <header class="pt-48 pb-32 bg-white relative overflow-hidden">

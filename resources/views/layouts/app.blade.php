@@ -4,6 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Conectividad y Comunicaciones S.L. - Soluciones IT de gran envergadura y agilidad digital para tu negocio. Más de 30 años de experiencia.">
+    <meta name="author" content="Conycom S.L.">
+    
+    <!-- OpenGraph / Social (Spec-017) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="@yield('title', 'Soluciones IT y Enterprise') | Conycom">
+    <meta property="og:description" content="Conectividad y Comunicaciones S.L. - Soluciones IT de gran envergadura y agilidad digital para tu negocio.">
+    <meta property="og:image" content="{{ asset(config('corporate.social_image')) }}">
+
+    <!-- Google Analytics / Metrics (Spec-018) -->
+    @if(config('corporate.analytics_id'))
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('corporate.analytics_id') }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            
+            // Default consent mode (denied)
+            gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied'
+            });
+
+            gtag('js', new Date());
+            gtag('config', '{{ config('corporate.analytics_id') }}');
+        </script>
+    @endif
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:title" content="@yield('title', 'Soluciones IT y Enterprise') | Conycom">
+    <meta name="twitter:description" content="Conectividad y Comunicaciones S.L. - Soluciones IT de gran envergadura y agilidad digital para tu negocio.">
+    <meta name="twitter:image" content="{{ asset(config('corporate.social_image')) }}">
+
+    <!-- Page Specific Meta Override -->
+    @stack('meta')
     
     <!-- SEO Titles -->
     <title>@yield('title', 'Soluciones IT y Enterprise') | Conycom</title>

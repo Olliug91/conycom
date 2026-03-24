@@ -2,6 +2,12 @@
         show: !localStorage.getItem('cookies_accepted'),
         accept() {
             localStorage.setItem('cookies_accepted', 'true');
+            if (window.gtag) {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted',
+                    'ad_storage': 'granted'
+                });
+            }
             this.show = false;
         }
     }" 

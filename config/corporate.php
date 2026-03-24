@@ -35,6 +35,8 @@ return [
     'logo_alt' => 'CONYCOM Logo',
     'logo_height_nav' => 'h-20', // Tailwind height class
     'logo_height_footer' => 'h-16',
+    'social_image' => 'storage/img/social_og.png', // Spec-017
+    'analytics_id' => env('GOOGLE_ANALYTICS_ID'), // Spec-018
     /*
     |--------------------------------------------------------------------------
     | The Team (Spec-015)
