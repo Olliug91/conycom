@@ -21,6 +21,11 @@ class PageController extends Controller
         return view('pages.proyectos');
     }
 
+    public function quienesSomos()
+    {
+        return view('pages.quienes-somos');
+    }
+
     public function contacto()
     {
         return view('pages.contacto');

@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectController;
 
 Route::get('/', [ProjectController::class, 'home'])->name('home');
+Route::get('/quienes-somos', [PageController::class, 'quienesSomos'])->name('quienes-somos');
 Route::get('/servicios', [PageController::class, 'servicios'])->name('servicios');
 Route::get('/proyectos', [ProjectController::class, 'index'])->name('proyectos');
 Route::get('/contacto', [PageController::class, 'contacto'])->name('contacto');

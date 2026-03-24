@@ -14,7 +14,7 @@ class ProjectController extends Controller
                 'title' => 'Disfarsor Farmacéutica',
                 'description' => 'Soluciones B2B avanzadas para el sector de la distribución farmacéutica. Optimización de procesos y canal de venta digital.',
                 'link' => 'https://disfarsor.com',
-                'tags' => ['#Laravel', '#B2B', '#Pharma'],
+                'tags' => ['#FoxPro', '#B2B', '#Pharma'],
             ],
             [
                 'id' => '002/NC',
@@ -56,14 +56,14 @@ class ProjectController extends Controller
                 'title' => 'BasicSoft Club',
                 'description' => 'Plataforma de servicios de software especializado y red de colaboración tecnológica. Soluciones integrales para el ecosistema de asociados del club.',
                 'link' => 'https://basicsoftclub.es',
-                'tags' => ['#Software', '#Club', '#Solutions'],
+                'tags' => ['#SaaS', '#Club', '#Solutions'],
             ],
             [
                 'id' => '008/VB',
                 'title' => 'Veribridge',
                 'description' => 'Middleware especializado para la conexión de sistemas de facturación con la AEAT (VeriFactu). Solución robusta de cumplimiento normativo fiscal en tiempo real.',
                 'link' => 'https://veribridge.guillermotudela.es',
-                'tags' => ['#VeriFactu', '#AEAT', '#Middleware', '#Compliance'],
+                'tags' => ['#VeriFactu', '#AEAT', '#Middleware', '#Compliance', '#SaaS'],
             ],
         ];
     }

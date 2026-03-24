@@ -23,6 +23,9 @@
                 <a href="{{ route('servicios') }}" class="{{ request()->routeIs('servicios') ? 'text-brand-dark font-bold underline underline-offset-8' : 'text-[#706f6c] hover:text-brand-dark transition-colors' }} text-xs font-sans uppercase tracking-widest">
                     Servicios
                 </a>
+                <a href="{{ route('quienes-somos') }}" class="{{ request()->routeIs('quienes-somos') ? 'text-brand-dark font-bold underline underline-offset-8' : 'text-[#706f6c] hover:text-brand-dark transition-colors' }} text-xs font-sans uppercase tracking-widest">
+                    Equipo
+                </a>
                 <a href="{{ route('proyectos') }}" class="{{ request()->routeIs('proyectos') ? 'text-brand-dark font-bold underline underline-offset-8' : 'text-[#706f6c] hover:text-brand-dark transition-colors' }} text-xs font-sans uppercase tracking-widest">
                     Proyectos
                 </a>
@@ -52,6 +55,7 @@
         <div class="p-8 space-y-6">
             <a href="{{ route('home') }}" class="block text-xl font-bold uppercase tracking-tighter {{ request()->routeIs('home') ? 'text-brand-dark' : 'text-[#706f6c]' }}">Inicio</a>
             <a href="{{ route('servicios') }}" class="block text-xl font-bold uppercase tracking-tighter {{ request()->routeIs('servicios') ? 'text-brand-dark' : 'text-[#706f6c]' }}">Servicios</a>
+            <a href="{{ route('quienes-somos') }}" class="block text-xl font-bold uppercase tracking-tighter {{ request()->routeIs('quienes-somos') ? 'text-brand-dark' : 'text-[#706f6c]' }}">Equipo</a>
             <a href="{{ route('proyectos') }}" class="block text-xl font-bold uppercase tracking-tighter {{ request()->routeIs('proyectos') ? 'text-brand-dark' : 'text-[#706f6c]' }}">Proyectos</a>
             <a href="{{ route('contacto') }}" class="block w-full text-center py-4 bg-brand-dark text-brand-white font-mono uppercase tracking-widest text-xs">Hablemos de tu Proyecto</a>
         </div>

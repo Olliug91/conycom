@@ -19,6 +19,7 @@ return [
     'address' => 'Camino Nuevo Picaña 5 22, 46014 Valencia',
     'city' => 'Valencia',
     'zip' => '46014',
+    'linkedin' => 'https://linkedin.com/company/conycom', // Global Placeholder
     'maps_link' => 'https://www.google.com/maps/search/?api=1&query=Camino+Nuevo+Pica%C3%B1a+5+22+46014+Valencia',
     
     // Datos Legales (LSSI)
@@ -34,4 +35,32 @@ return [
     'logo_alt' => 'CONYCOM Logo',
     'logo_height_nav' => 'h-20', // Tailwind height class
     'logo_height_footer' => 'h-16',
+    /*
+    |--------------------------------------------------------------------------
+    | The Team (Spec-015)
+    |--------------------------------------------------------------------------
+    */
+    'team' => [
+        'founder' => [
+            'name' => 'Guillermo Tudela Soler',
+            'role' => 'Fundador & Legado Estratégico',
+            'vision' => 'Desde 1996 construyendo la base de nuestra fiabilidad hoy.',
+            'image' => 'storage/img/guille_padre.jpg',
+            'linkedin' => 'https://www.linkedin.com/in/guillermo-tudela-soler-9451b4226/',
+        ],
+        'lead' => [
+            'name' => 'Guillermo Tudela Marco',
+            'role' => 'Dirección Técnica & Innovation',
+            'vision' => 'Liderando la evolución hacia el SDD y la automatización proactiva.',
+            'image' => 'storage/img/guille.jpg',
+            'linkedin' => 'https://linkedin.com/in/guillermo-tudela',
+        ],
+        'collaborator' => [
+            'name' => 'Belén García Miranda',
+            'role' => 'Estrategia de Marketing & Diseño (Betopeer)',
+            'vision' => 'Transformando la complejidad técnica en experiencias visuales memorables.',
+            'image' => 'storage/img/belen.jpg',
+            'linkedin' => 'https://www.linkedin.com/in/bel%C3%A9n-garc%C3%ADa-miranda-14060212/',
+        ],
+    ],
 ];
