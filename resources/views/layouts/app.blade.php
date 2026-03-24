@@ -11,7 +11,11 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="@yield('title', 'Soluciones IT y Enterprise') | Conycom">
     <meta property="og:description" content="Conectividad y Comunicaciones S.L. - Soluciones IT de gran envergadura y agilidad digital para tu negocio.">
-    <meta property="og:image" content="{{ asset(config('corporate.social_image')) }}">
+    <meta property="og:image" content="{{ url(config('corporate.social_image')) }}">
+    <meta property="og:image:secure_url" content="{{ url(config('corporate.social_image')) }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
 
     <!-- Google Analytics / Metrics (Spec-018) -->
     @if(config('corporate.analytics_id'))
@@ -36,7 +40,7 @@
     <meta name="twitter:url" content="{{ url()->current() }}">
     <meta name="twitter:title" content="@yield('title', 'Soluciones IT y Enterprise') | Conycom">
     <meta name="twitter:description" content="Conectividad y Comunicaciones S.L. - Soluciones IT de gran envergadura y agilidad digital para tu negocio.">
-    <meta name="twitter:image" content="{{ asset(config('corporate.social_image')) }}">
+    <meta name="twitter:image" content="{{ url(config('corporate.social_image')) }}">
 
     <!-- Page Specific Meta Override -->
     @stack('meta')
