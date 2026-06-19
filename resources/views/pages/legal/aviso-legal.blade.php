@@ -20,7 +20,6 @@
                 <li><strong>CIF:</strong> {{ config('corporate.cif') }}</li>
                 <li><strong>Domicilio Social:</strong> {{ config('corporate.address') }}</li>
                 <li><strong>Correo Electrónico:</strong> {{ config('corporate.email') }}</li>
-                <li><strong>Datos Registrales:</strong> {{ config('corporate.registry_info') }}</li>
             </ul>
 
             <h2 class="text-2xl font-black mb-8 tracking-tighter uppercase text-brand-dark">2. USUARIOS</h2>
