@@ -65,6 +65,13 @@ class ProjectController extends Controller
                 'link' => 'https://veribridge.guillermotudela.es',
                 'tags' => ['#VeriFactu', '#AEAT', '#Middleware', '#Compliance', '#SaaS'],
             ],
+            [
+                'id' => '009/KX',
+                'title' => 'KX Compete',
+                'description' => 'Solución integral para la gestión y organización de competiciones deportivas. Incluye funcionalidades para inscripciones, pesajes, sorteos, resultados, scoring y retransmisión en vivo.',
+                'link' => 'https://kxcompete.com',
+                'tags' => ['#SaaS', '#Sports', '#Competition'],
+            ],
         ];
     }
 
