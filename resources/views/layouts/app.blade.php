@@ -11,8 +11,8 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="@yield('title', 'Soluciones IT y Enterprise') | Conycom">
     <meta property="og:description" content="Conectividad y Comunicaciones S.L. - Soluciones IT de gran envergadura y agilidad digital para tu negocio.">
-    <meta property="og:image" content="{{ url(config('corporate.social_image')) }}">
-    <meta property="og:image:secure_url" content="{{ url(config('corporate.social_image')) }}">
+    <meta property="og:image" content="{{ asset(config('corporate.social_image')) }}?v=1.0.1">
+    <meta property="og:image:secure_url" content="{{ asset(config('corporate.social_image')) }}?v=1.0.1">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">

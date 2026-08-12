@@ -9,32 +9,35 @@
 
 @section('content')
     <!-- Hero Section: Agilidad + Escabilidad -->
-    <section class="border-b border-corporate-border overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[75vh]">
+    <section id="hero-section" class="border-b border-corporate-border overflow-hidden relative group/hero">
+        <!-- Interactive Node Canvas Layer -->
+        <canvas id="node-canvas" class="absolute inset-0 w-full h-full z-0 opacity-100 pointer-events-none"></canvas>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[75vh] relative z-10">
             
             <!-- Innovation Pillar -->
-            <div class="p-8 lg:p-16 bg-corporate-gray border-b lg:border-b-0 lg:border-r border-corporate-border flex flex-col justify-between group transition-all duration-700">
+            <div class="p-8 lg:p-16 bg-corporate-gray/30 backdrop-blur-md border-b lg:border-b-0 lg:border-r border-corporate-border flex flex-col justify-between group transition-all duration-700">
                 <div class="space-y-8">
                     <div class="flex items-center gap-4">
-                        <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-[#706f6c]">Digital Evolution // Est. 1996</span>
+                        <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-[#706f6c]">Enterprise Architecture // Laravel Experts</span>
                         <div class="h-px flex-1 bg-brand-dark/10"></div>
                     </div>
                     <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] text-brand-dark">
-                        AGILIDAD PARA<br>INNOVAR.
+                        INGENIERÍA <br>B2B.
                     </h1>
                     <p class="text-base text-brand-dark/80 leading-relaxed max-w-sm font-sans">
-                        Transformamos ideas complejas en soluciones digitales rápidas y efectivas. Ayudamos a su empresa a moverse a la velocidad que el mercado demanda hoy.
+                        Diseñamos y escalamos ERPs a medida, Middleware B2B y Arquitecturas Complejas en Laravel para empresas que no pueden depender de soluciones estándar.
                     </p>
                 </div>
                 
                 <div class="mt-12 flex items-center gap-2 font-mono text-[10px] text-[#706f6c]">
-                    <span>[ READY_TO_BUILD ]</span>
+                    <span>[ LARAVEL_PARTNERS_READY ]</span>
                     <span class="animate-pulse">_</span>
                 </div>
             </div>
 
             <!-- Scalability Pillar -->
-            <div class="p-8 lg:p-16 flex flex-col justify-between bg-white group hover:bg-brand-dark transition-all duration-700">
+            <div class="p-8 lg:p-16 flex flex-col justify-between bg-white/40 backdrop-blur-md group hover:bg-brand-dark transition-all duration-700">
                 <div class="space-y-8">
                     <div class="flex items-center gap-4">
                         <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-[#706f6c] group-hover:text-white/40">Reliable Systems // 2026</span>
@@ -45,16 +48,16 @@
                         SOLIDEZ PARA<br>ESCALAR.
                     </h2>
                     <p class="text-base text-brand-dark/80 group-hover:text-white/80 leading-relaxed max-w-sm font-sans transition-colors">
-                        No solo creamos webs; proyectamos la infraestructura técnica que su negocio necesita para crecer sin límites y con absoluta seguridad.
+                        Migramos sistemas legacy (FoxPro, Access) a entornos robustos en la nube. Conectamos Magento, Microsoft Dynamics y múltiples APIs sin fricción.
                     </p>
                 </div>
 
                 <div class="mt-12 flex flex-wrap gap-4">
                     <a href="{{ route('contacto') }}" class="px-8 py-3 bg-brand-dark text-brand-white text-[10px] font-mono uppercase tracking-widest hover:opacity-90 transition-all border border-brand-dark group-hover:bg-white group-hover:text-brand-dark group-hover:border-white">
-                        Impulsa tu Negocio
+                        Evaluar Arquitectura
                     </a>
                     <a href="#proyectos" class="px-8 py-3 border border-brand-dark text-brand-dark text-[10px] font-mono uppercase tracking-widest hover:bg-brand-dark hover:text-brand-white transition-all group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-brand-dark">
-                        Ver Soluciones
+                        Ver Casos de Éxito
                     </a>
                 </div>
             </div>
@@ -98,26 +101,31 @@
                     </h2>
                     <div class="space-y-6 text-white/70 leading-relaxed text-base max-w-lg font-sans">
                         <p>
-                            En Conycom, no solo resolvemos problemas técnicos; desbloqueamos el potencial de su negocio. Nos apasiona construir soluciones ágiles que eliminen fricciones y permitan a su equipo centrarse en lo que mejor sabe hacer.
+                            En Conycom construimos ecosistemas de software empresariales (SaaS, ERPs, Middleware) que reemplazan la complejidad por fluidez. Nos especializamos en orquestar el ecosistema de Laravel para soportar operaciones críticas.
                         </p>
                         <p>
-                            Nuestra metodología combina la rapidez del desarrollo moderno con una **disciplina de ingeniería de alta precisión**. Esta mentalidad constructiva nos permite proyectar estructuras digitales que no solo funcionan hoy, sino que están preparadas para lo que venga mañana.
+                            Aprovechamos la potencia del **TALL Stack** (Tailwind, Alpine, Laravel, Livewire) para modernizar infraestructuras anticuadas y sincronizar sistemas desconectados con una precisión de relojería suiza.
                         </p>
                     </div>
                 </div>
 
                 <!-- Technical Stats -->
                 <div class="border border-white/10 p-8 lg:p-12 space-y-12 bg-white/5">
-                    <div class="grid grid-cols-2 gap-12">
-                        <div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-white/10">
+                        <div class="pt-8 md:pt-0">
+                            <span class="block text-[10px] font-mono uppercase tracking-widest text-white/40 mb-4">Framework</span>
+                            <span class="text-4xl font-bold tracking-tighter italic">LARAVEL</span>
+                            <span class="block text-[9px] font-mono uppercase mt-2 opacity-60">Arquitectura Moderna</span>
+                        </div>
+                        <div class="pt-8 md:pt-0 md:pl-12">
                             <span class="block text-[10px] font-mono uppercase tracking-widest text-white/40 mb-4">Metodología</span>
                             <span class="text-4xl font-bold tracking-tighter italic">SDD</span>
                             <span class="block text-[9px] font-mono uppercase mt-2 opacity-60">Spec-Driven Development</span>
                         </div>
-                        <div>
-                            <span class="block text-[10px] font-mono uppercase tracking-widest text-white/40 mb-4">Disciplina</span>
-                            <span class="text-2xl font-bold tracking-tighter leading-tight">Ingeniería<br>Digital</span>
-                            <span class="block text-[9px] font-mono uppercase mt-2 opacity-60">Sistemas</span>
+                        <div class="pt-8 md:pt-0 md:pl-12">
+                            <span class="block text-[10px] font-mono uppercase tracking-widest text-white/40 mb-4">Especialidad</span>
+                            <span class="text-2xl font-bold tracking-tighter leading-tight">Sistemas<br>B2B</span>
+                            <span class="block text-[9px] font-mono uppercase mt-2 opacity-60">ERPs & Middleware</span>
                         </div>
                     </div>
                     <div class="pt-12 border-t border-white/10">
@@ -344,4 +352,151 @@
             </div>
         </div>
     </section>
+
+    @push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('node-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const heroSection = document.getElementById('hero-section');
+            if (!heroSection) return;
+
+            // Set canvas size
+            function setCanvasSize() {
+                canvas.width = heroSection.offsetWidth;
+                canvas.height = heroSection.offsetHeight;
+            }
+            setCanvasSize();
+
+            let particlesArray = [];
+            let mouse = {
+                x: null,
+                y: null,
+                radius: 180 // radius for interaction
+            };
+
+            // Capture mouse coordinates relative to hero section
+            heroSection.addEventListener('mousemove', function(event) {
+                const rect = heroSection.getBoundingClientRect();
+                mouse.x = event.clientX - rect.left;
+                mouse.y = event.clientY - rect.top;
+            });
+
+            heroSection.addEventListener('mouseleave', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            window.addEventListener('resize', function() {
+                setCanvasSize();
+                init();
+            });
+
+            class Particle {
+                constructor() {
+                    this.size = (Math.random() * 2) + 1; // Bigger nodes
+                    this.x = Math.random() * (canvas.width - this.size * 2) + this.size;
+                    this.y = Math.random() * (canvas.height - this.size * 2) + this.size;
+                    this.directionX = (Math.random() * 0.6) - 0.3; // slightly faster
+                    this.directionY = (Math.random() * 0.6) - 0.3;
+                    this.color = '#000000'; // High contrast black
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+
+                update() {
+                    if (this.x > canvas.width || this.x < 0) {
+                        this.directionX = -this.directionX;
+                    }
+                    if (this.y > canvas.height || this.y < 0) {
+                        this.directionY = -this.directionY;
+                    }
+
+                    // Optional node evasion (repel mouse) to simulate live data
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (mouse.x && distance < mouse.radius / 2) {
+                        this.x -= dx / 50;
+                        this.y -= dy / 50;
+                    }
+
+                    this.x += this.directionX;
+                    this.y += this.directionY;
+                    this.draw();
+                }
+            }
+
+            function init() {
+                particlesArray = [];
+                // More nodes for denser network
+                let numberOfNodes = Math.floor((canvas.width * canvas.height) / 9000);
+                if(numberOfNodes > 180) numberOfNodes = 180; // Cap at 180 nodes
+                
+                for (let i = 0; i < numberOfNodes; i++) {
+                    particlesArray.push(new Particle());
+                }
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                }
+                connect();
+            }
+
+            function connect() {
+                for (let a = 0; a < particlesArray.length; a++) {
+                    for (let b = a + 1; b < particlesArray.length; b++) {
+                        let distance = ((particlesArray[a].x - particlesArray[b].x) ** 2) + 
+                                       ((particlesArray[a].y - particlesArray[b].y) ** 2);
+                        
+                        let maxDist = (canvas.width / 10) * (canvas.height / 10); // Find nodes further away
+                        if (distance < maxDist) {
+                            let opacityValue = 1 - (distance / maxDist);
+                            if (opacityValue > 0.4) opacityValue = 0.4; // More visible lines
+                            ctx.strokeStyle = `rgba(0, 0, 0, ${opacityValue})`;
+                            ctx.lineWidth = 1.2;
+                            ctx.beginPath();
+                            ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                            ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                            ctx.stroke();
+                        }
+                    }
+                    
+                    // Mouse connection
+                    if (mouse.x !== null && mouse.y !== null) {
+                        let dx = particlesArray[a].x - mouse.x;
+                        let dy = particlesArray[a].y - mouse.y;
+                        let mouseDist = dx * dx + dy * dy;
+                        if (mouseDist < (mouse.radius * mouse.radius)) {
+                            let opHover = 1 - (mouseDist / (mouse.radius * mouse.radius));
+                            if (opHover > 0.6) opHover = 0.6; // Stronger interaction
+                            ctx.strokeStyle = `rgba(0, 0, 0, ${opHover})`;
+                            ctx.lineWidth = 1.5;
+                            ctx.beginPath();
+                            ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                            ctx.lineTo(mouse.x, mouse.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            init();
+            animate();
+        });
+    </script>
+    @endpush
 @endsection
