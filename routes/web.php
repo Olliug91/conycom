@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProjectController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProjectController::class, 'home'])->name('home');
 Route::get('/quienes-somos', [PageController::class, 'quienesSomos'])->name('quienes-somos');

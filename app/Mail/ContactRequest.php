@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -29,7 +28,7 @@ class ContactRequest extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Nueva Solicitud de Auditoría - ' . ($this->data['nombre'] ?? 'Conycom'),
+            subject: 'Nueva Solicitud de Auditoría - '.($this->data['nombre'] ?? 'Conycom'),
             replyTo: [
                 new Address($this->data['email'], $this->data['nombre']),
             ],

@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class ProjectController extends Controller
 {
     private function getProjects()
@@ -88,8 +86,8 @@ class ProjectController extends Controller
                 'impact' => [
                     'Sincronización' => 'Real-time',
                     'Carga Manual' => '-100%',
-                    'Precisión Datos' => '99.9%'
-                ]
+                    'Precisión Datos' => '99.9%',
+                ],
             ],
             [
                 'id' => '002/DISF',
@@ -101,8 +99,8 @@ class ProjectController extends Controller
                 'impact' => [
                     'Uptime' => '99.99%',
                     'UX/UI' => 'Modernizada',
-                    'Escalabilidad' => 'Cloud Native'
-                ]
+                    'Escalabilidad' => 'Cloud Native',
+                ],
             ],
             [
                 'id' => '009/KX',
@@ -114,9 +112,9 @@ class ProjectController extends Controller
                 'impact' => [
                     'Latencia' => '< 50ms',
                     'Concurrencia' => 'Alta Demanda',
-                    'Gestión' => 'Centralizada'
-                ]
-            ]
+                    'Gestión' => 'Centralizada',
+                ],
+            ],
         ];
     }
 
@@ -124,14 +122,14 @@ class ProjectController extends Controller
     {
         return view('pages.proyectos', [
             'projects' => $this->getProjects(),
-            'caseStudies' => $this->getCaseStudies()
+            'caseStudies' => $this->getCaseStudies(),
         ]);
     }
 
     public function home()
     {
         return view('pages.home', [
-            'featuredProjects' => array_slice($this->getProjects(), 0, 4)
+            'featuredProjects' => array_slice($this->getProjects(), 0, 4),
         ]);
     }
 }

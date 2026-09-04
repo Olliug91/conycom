@@ -21,7 +21,7 @@ return [
     'zip' => '46014',
     'linkedin' => 'https://linkedin.com/company/conycom', // Global Placeholder
     'maps_link' => 'https://www.google.com/maps/search/?api=1&query=Camino+Nuevo+Pica%C3%B1a+5+22+46014+Valencia',
-    
+
     // Datos Legales (LSSI)
     'cif' => 'B96775242', // User will need to fill this
     'registry_info' => 'Inscrita en el Registro Mercantil de Valencia, al Tomo XXX, Folio XXX, Hoja V-XXXXXX.',

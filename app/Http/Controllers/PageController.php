@@ -48,10 +48,11 @@ class PageController extends Controller
         try {
             \Illuminate\Support\Facades\Mail::to('guille@conycom.com')
                 ->send(new \App\Mail\ContactRequest($validated));
-            
+
             return back()->with('success', '¡Gracias por contactarnos! Tu solicitud ha sido recibida.');
         } catch (\Exception $e) {
-            \Illuminate\Support\Facades\Log::error('Error enviando mail de contacto: ' . $e->getMessage());
+            \Illuminate\Support\Facades\Log::error('Error enviando mail de contacto: '.$e->getMessage());
+
             return back()->with('error', 'Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo más tarde.');
         }
     }
