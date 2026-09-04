@@ -42,6 +42,11 @@ jobs:
       - name: Run Laravel Pint (Code Style)
         run: vendor/bin/pint --test
 
+      - name: Install NPM Dependencies & Build Vite Assets
+        run: |
+          npm ci || npm install
+          npm run build
+
       - name: Prepare Environment & App Key
         run: |
           cp .env.example .env
@@ -49,9 +54,3 @@ jobs:
 
       - name: Run Tests (PHPUnit)
         run: php artisan test
-
-      - name: Install NPM Dependencies
-        run: npm ci || npm install
-
-      - name: Build Frontend Assets (Vite)
-        run: npm run build
