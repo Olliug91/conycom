@@ -8,11 +8,11 @@ class ProjectController extends Controller
     {
         return [
             [
-                'id' => '001/DS',
-                'title' => 'Disfarsor Farmacéutica',
-                'description' => 'Soluciones B2B avanzadas para el sector de la distribución farmacéutica. Optimización de procesos y canal de venta digital.',
+                'id' => '001/TP',
+                'title' => 'Top-Pharma ERP',
+                'description' => 'Sistema ERP Cloud de misión crítica para la distribución mayorista farmacéutica. Gestión integral de almacén FEFO, verificación SEVeM y servidor telemático Fedicom v3 en alta disponibilidad.',
                 'link' => 'https://disfarsor.com',
-                'tags' => ['#FoxPro', '#B2B', '#Pharma'],
+                'tags' => ['#Laravel', '#Livewire', '#SEVeM', '#Fedicom', '#Pharma'],
             ],
             [
                 'id' => '002/NC',
@@ -90,16 +90,16 @@ class ProjectController extends Controller
                 ],
             ],
             [
-                'id' => '002/DISF',
-                'title' => 'Basicsoft Pharma (Core ERP)',
-                'context' => 'Modernización del sistema central de operaciones logísticas farmacéuticas (Disfarsor).',
-                'stack' => ['Laravel', 'TALL Stack', 'FoxPro Legacy', 'AWS', 'PostgreSQL'],
-                'challenge' => 'Migrar 30 años de lógica de negocio hiper-específica del sector farmacéutico (caducidades, lotes, normativas estrictas de trazabilidad) de un sistema legacy en FoxPro a una arquitectura web moderna, sin detener las operaciones logísticas diarias.',
-                'solution' => 'Estrategia de estrangulación (Strangler Fig Pattern). Reescritura progresiva de módulos operativos como SaaS utilizando Laravel y el stack TALL, garantizando un despliegue sin fricciones y abriendo la puerta a la comercialización del producto a terceros.',
+                'id' => '002/TP',
+                'title' => 'Top-Pharma ERP (Core Distribution)',
+                'context' => 'Modernización de arquitectura de misión crítica para la distribución mayorista farmacéutica (Validado en producción en Disfarsor).',
+                'stack' => ['Laravel', 'Livewire', 'MariaDB', 'SEVeM API', 'Fedicom v3', 'Queues / Workers'],
+                'challenge' => 'Modernizar más de 30 años de lógica de negocio farmacéutica hiper-específica (trazabilidad unitaria, caducidades FEFO, normativas sanitarias estrictas y facturación electrónica) provenientes de un sistema legado en FoxPro, garantizando continuidad operativa absoluta en un almacén de alta rotación.',
+                'solution' => 'Implementación del patrón de estrangulación (Strangler Fig Pattern). Coexistencia y migración modular hacia un núcleo en Laravel y Livewire: persistencia reactiva anti-apagones línea a línea, servidor/cliente telemático Fedicom v3, verificación instantánea SEVeM (DataMatrix) y colas asíncronas para reportes fiscales y bancarios.',
                 'impact' => [
-                    'Uptime' => '99.99%',
-                    'UX/UI' => 'Modernizada',
-                    'Escalabilidad' => 'Cloud Native',
+                    'Trazabilidad' => '100% FEFO',
+                    'Interoperabilidad' => 'Fedicom v3',
+                    'Disponibilidad' => '99.99%',
                 ],
             ],
             [
