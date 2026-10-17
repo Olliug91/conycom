@@ -14,7 +14,7 @@ Formalizar la integración de **Top-Pharma ERP** en el catálogo de proyectos y 
 - **ID**: `001/TP`
 - **Título**: `Top-Pharma ERP`
 - **Descripción**: Sistema ERP Cloud de misión crítica para la distribución mayorista farmacéutica. Gestión integral de almacén FEFO, verificación SEVeM y servidor telemático Fedicom v3 en alta disponibilidad.
-- **Link**: `https://disfarsor.com` *(entorno de referencia en producción)*
+- **Link**: `https://top-pharma.es` *(entorno de referencia en producción)*
 - **Tags**: `['#Laravel', '#Livewire', '#SEVeM', '#Fedicom', '#Pharma']`
 
 ### 2. Caso de Estudio Destacado (`getCaseStudies()`)

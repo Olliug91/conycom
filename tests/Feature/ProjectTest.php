@@ -18,6 +18,7 @@ class ProjectTest extends TestCase
         $response->assertSee('Fedicom v3');
         $response->assertSee('100% FEFO');
         $response->assertSee('Strangler Fig Pattern');
+        $response->assertSee('https://top-pharma.es');
     }
 
     public function test_home_page_features_top_pharma_as_first_showcase_project(): void

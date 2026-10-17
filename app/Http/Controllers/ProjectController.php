@@ -11,7 +11,7 @@ class ProjectController extends Controller
                 'id' => '001/TP',
                 'title' => 'Top-Pharma ERP',
                 'description' => 'Sistema ERP Cloud de misión crítica para la distribución mayorista farmacéutica. Gestión integral de almacén FEFO, verificación SEVeM y servidor telemático Fedicom v3 en alta disponibilidad.',
-                'link' => 'https://disfarsor.com',
+                'link' => 'https://top-pharma.es',
                 'tags' => ['#Laravel', '#Livewire', '#SEVeM', '#Fedicom', '#Pharma'],
             ],
             [
