@@ -25,7 +25,7 @@
     <!-- The Team Grid -->
     <section class="py-32 bg-corporate-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid lg:grid-cols-3 gap-16 items-start">
+            <div class="grid md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-20 items-start">
                 
                 <!-- Founder: Guillermo Tudela Soler -->
                 <div class="space-y-10 group">
@@ -60,7 +60,7 @@
                 </div>
 
                 <!-- Lead: Guillermo Tudela Marco -->
-                <div class="space-y-10 group lg:mt-32">
+                <div class="space-y-10 group md:mt-24">
                     <div class="max-w-[320px] aspect-[4/5] bg-brand-dark/5 overflow-hidden border border-brand-dark/10 relative shadow-inner">
                         @if(file_exists(public_path(config('corporate.team.lead.image'))))
                             <img src="{{ asset(config('corporate.team.lead.image')) }}" alt="{{ config('corporate.team.lead.name') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
@@ -93,8 +93,40 @@
                     </div>
                 </div>
 
-                <!-- Collaborator: Belen Garcia Casa -->
-                <div class="space-y-10 group lg:mt-64">
+                <!-- Advisor: Javier Cuervas María -->
+                <div class="space-y-10 group">
+                    <div class="max-w-[320px] aspect-[4/5] bg-brand-dark/5 overflow-hidden border border-brand-dark/10 relative shadow-inner">
+                        @if(file_exists(public_path(config('corporate.team.advisor.image'))))
+                            <img src="{{ asset(config('corporate.team.advisor.image')) }}" alt="{{ config('corporate.team.advisor.name') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        @else
+                            <div class="w-full h-full flex items-center justify-center text-[10px] font-mono text-brand-dark/20 uppercase">
+                                [ Advisor ]
+                            </div>
+                        @endif
+                        <div class="absolute inset-0 bg-brand-dark/5 opacity-40 group-hover:opacity-0 transition-opacity pointer-events-none"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-[9px] font-mono uppercase tracking-[0.2em] text-[#706f6c]">Ecosistema // Estrategia & Negocio</span>
+                        <div class="flex items-center justify-between gap-4">
+                            <h2 class="text-2xl font-black tracking-tighter uppercase text-brand-dark leading-none">{{ config('corporate.team.advisor.name') }}</h2>
+                            @if(config('corporate.team.advisor.linkedin'))
+                                <a href="{{ config('corporate.team.advisor.linkedin') }}" target="_blank" class="opacity-20 hover:opacity-100 transition-opacity">
+                                    <svg class="w-4 h-4 fill-brand-dark" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                            @endif
+                        </div>
+                        <p class="text-sm font-bold text-brand-dark/40">{{ config('corporate.team.advisor.role') }}</p>
+                        <p class="text-sm text-brand-dark/60 font-sans leading-relaxed italic border-l-2 border-brand-dark/10 pl-4 py-1">
+                            "{{ config('corporate.team.advisor.vision') }}"
+                        </p>
+                        <p class="text-[13px] text-brand-dark/50 leading-relaxed font-sans pr-4">
+                            Asesor estratégico y comercial de Conycom. Aporta una sólida trayectoria en desarrollo de negocio en consultoras tecnológicas de primer nivel para impulsar proyectos y abrir nuevas oportunidades.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Collaborator: Belén García Miranda -->
+                <div class="space-y-10 group md:mt-24">
                     <div class="max-w-[320px] aspect-[4/5] bg-brand-dark/5 overflow-hidden border border-brand-dark/10 relative shadow-inner">
                         @if(file_exists(public_path(config('corporate.team.collaborator.image'))))
                             <img src="{{ asset(config('corporate.team.collaborator.image')) }}" alt="{{ config('corporate.team.collaborator.name') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
@@ -125,7 +157,6 @@
                     </div>
                 </div>
 
-            </div>
             </div>
         </div>
     </section>

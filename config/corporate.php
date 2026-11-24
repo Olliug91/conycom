@@ -57,6 +57,13 @@ return [
             'image' => 'storage/img/guille.jpg',
             'linkedin' => 'https://linkedin.com/in/guillermo-tudela',
         ],
+        'advisor' => [
+            'name' => 'Javier Cuervas María',
+            'role' => 'Estrategia Comercial & Desarrollo de Negocio',
+            'vision' => 'Conectando la excelencia técnica con oportunidades de negocio sólidas y sostenibles.',
+            'image' => 'storage/img/javier.jpg',
+            'linkedin' => 'https://www.linkedin.com/in/javiercuervas/',
+        ],
         'collaborator' => [
             'name' => 'Belén García Miranda',
             'role' => 'Estrategia de Marketing & Diseño (Betopeer)',
